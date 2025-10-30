@@ -6,7 +6,7 @@ const BarberBookingSystem = () => {
   const [appointments, setAppointments] = useState([]);
   const [config, setConfig] = useState({
     shopName: 'Il Mio Barbiere',
-    apiKey: '',
+    apiKey: import.meta.env.VITE_GROQ_API_KEY || '',
     workHours: { start: '09:00', end: '19:00' },
     workDays: [1, 2, 3, 4, 5, 6],
     services: [
